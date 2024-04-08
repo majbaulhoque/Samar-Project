@@ -1,380 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <title>Document</title>
+    <title>Sticky Navbar</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles for sticky navbar */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure the navbar is above other content */
+            transition: top 0.3s; /* Add smooth transition effect */
+        }
+    </style>
 </head>
-<body>
 
-    
-        <!-- <nav class="max-w-7xl mx-auto">
-            <div class="flex justify-between p-1">
-                <div class="flex items-center">
-                    <img class="h-5 w-5 mr-2 mt-1" src="./email.png" alt="email">
-                    <p class="text-white text-sm sm:text-base">info@example.com</p>
-                    <img class="h-5 w-5 mr-2 ml-4 mt-1" src="./phone-call.png" alt="Phone">
-                    <p class="text-white text-sm sm:text-base">+91 987-654-321</p>
-                </div>
-                <div class="flex"> 
-                    <img class="h-6 w-6 mr-2 mt-1" src="./facebook.png" alt="facebook">
-                    <img class="h-6 w-6 mr-2 mt-1" src="./social.png" alt="instagram">
-                    <img class="h-6 w-6 mr-2 mt-1" src="./twitter.png" alt="twitter">
-                </div>
-            </div>
-            <hr>
-        </nav>
-        <header class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-center mt-6">
+<body class="bg-gray-200">
+    <!-- Navbar -->
+    <!-- <nav id="navbar" class="bg-white shadow-lg">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
                 <div>
-                    <img src="./logo-white.png" alt="">
+                    <a href="#" class="text-lg font-bold text-gray-800">Logo</a>
                 </div>
-                <div class="mt-6 flex flex-wrap gap-4">
-                    <a class="text-white text-base font-bold p-1" href="Home">Home</a>
-                    <a class="text-white text-base font-bold p-1" href="Pages">Pages</a>
-                    <a class="text-white text-base font-bold p-1" href="Services">Services</a>
-                    <a class="text-white text-base font-bold p-1" href="Blog">Blog</a>
-                    <a class="text-white text-base font-bold p-1" href="Contact Us">Contact Us</a>
-                    <button class="text-white shadow-lg rounded-3xl h-10 pl-4 pr-4 bg-gradient-to-r from-[#F56787] to-[#F79C63]">Get A Quote</button>
+                <div class="md:flex md:items-center md:space-x-4">
+                    <a href="#" class="text-gray-600 hover:text-gray-800">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800">About</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-gray-800">Contact</a>
                 </div>
             </div>
-            <div class="flex bg-gradient-to-r from-[#F56787] to-[#F79C63]">
-                <div class="text-white">
-                    <p class="mt-32 text-lg p-1 shadow-sm rounded-2xl bg-[#F67281] w-48"><span class="pl-5 pb-4">WE ARE THE BEST</span></p>
-                    <h3 class="text-3xl sm:text-5xl mt-5 mb-4">We Provide Website</h3>
-                    <h3 class="text-3xl sm:text-5xl mb-5"> Solution For You</h3>
-                    <p class="text-base mb-4">Mauris in enim sollicitudin quam sollicitudin fermentum ut vitae massa.<br>Donec venenatis accumsan nisi, sit amet maximus velit euismod sit amet. <br>Vivamus et sem sed ipsum pretium lobortis non vitae sem.</p>
-                    <button class="text-base sm:text-lg rounded-3xl shadow-lg bg-white text-red-400 h-12 pr-6 pl-6">Learn More</button>
+        </div>
+    </nav> -->
+
+    <nav id="navbar" class="relative">
+        <div class="flex flex-col sm:flex-row justify-between items-center mt-6 transition-transform">
+            <div class="flex ml-[-150px] md:ml-0 lg:ml-0 ">
+                <img class="ml-36 md:ml-[-0px] lg:ml-[-0px]" src="./logo-white.png" alt="">
+                <div>
+                    <img class="block mt-5 ml-32 md:hidden lg:hidden h-6" src="./menu.png" alt="">
                 </div>
-                
             </div>
-            
-        </header> -->
+            <div class="mt-6 md:flex lg:flex flex-wrap gap-4 hidden">
+                <a class="text-white text-base font-bold p-1" href="Home">Home</a>
+                <a class="text-white text-base font-bold p-1" href="Pages">Pages</a>
+                <a class="text-white text-base font-bold p-1" href="Services">Services</a>
+                <a class="text-white text-base font-bold p-1" href="Blog">Blog</a>
+                <a class="text-white text-base font-bold p-1" href="Contact Us">Contact Us</a>
+                <button class="text-white shadow-lg rounded-3xl h-10 pl-4 pr-4 bg-gradient-to-r from-[#F56787] to-[#F79C63]">Get A Quote</button>
+            </div>
+        </div>
+    </nav>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima vero similique eius praesentium eos quam at a iste, odio alias nemo. At temporibus in, maiores harum quisquam nemo voluptates, deleniti sapiente corporis ullam velit, quidem pariatur dolorem! Distinctio, qui reiciendis nisi amet quis dolor ipsa consectetur ratione porro veniam, soluta cupiditate odit dignissimos laborum rem minima nulla mollitia. A fugiat itaque nesciunt accusamus deleniti odit quaerat commodi consectetur, dolorum quidem laudantium dicta velit, exercitationem ullam temporibus. Quod nihil, aut officia debitis necessitatibus eos animi ipsum? Laudantium, quod quo. Numquam corrupti exercitationem earum ipsam nam animi explicabo nulla est, quasi veritatis dolore, officiis quis minus cupiditate, nesciunt velit aut quae totam quod voluptatum reprehenderit natus at vitae. Ipsum enim cupiditate voluptate quam tempora magnam modi harum iure animi alias asperiores ratione consequatur reprehenderit possimus aliquam vitae adipisci qui voluptates quia, excepturi facere deserunt! Tempore quas recusandae harum quibusdam, nostrum possimus aliquam eligendi repellat. Minima, sint sunt, debitis facere adipisci at exercitationem accusantium numquam vero nostrum dolore nemo recusandae illum, cupiditate esse consequatur doloremque et. Voluptate excepturi neque doloribus eaque expedita, doloremque quia quis perspiciatis dolore, consequatur aperiam nulla odio ratione dolores delectus, nemo et at! Vitae incidunt repudiandae aliquam necessitatibus a voluptas deserunt facere corporis vero, nisi consequatur! Iure, numquam dolor corporis a voluptate obcaecati vitae assumenda eaque ullam ratione temporibus repellat modi quam. Explicabo autem unde, perspiciatis ullam dolores commodi facere incidunt aspernatur, temporibus repellendus ipsam enim fugit nisi voluptates excepturi illum earum tempore culpa quis voluptate hic quae. Sint dolores nemo, tenetur nisi praesentium illo temporibus autem ipsum ratione voluptates maiores eum? Accusantium temporibus asperiores adipisci eligendi pariatur cum, voluptatum illo, dolor perferendis natus quibusdam autem perspiciatis iure fugit voluptatem minima aliquam! Magnam porro at deleniti tenetur, repellendus praesentium est, totam impedit quia aut quisquam dicta similique id tempore libero, accusamus possimus ipsa assumenda ex autem dolore! Magni numquam eius esse aspernatur nulla? Sapiente nisi veritatis porro officia, fugiat ea magnam eveniet nesciunt perferendis provident? Nisi excepturi, deserunt aperiam dolorem exercitationem in perspiciatis dignissimos laudantium facilis, ullam est. Possimus delectus atque labore quaerat similique expedita dolore velit blanditiis facilis sapiente, laborum tempore, dolor animi, odit ipsum excepturi officiis! Beatae error nisi sunt eligendi. Error voluptas earum officia sed? Dolorem aspernatur esse soluta maiores, in facere! Praesentium dignissimos eligendi maxime quos quia vero, saepe fugit cumque laudantium veniam quod? Error voluptate nemo aliquam dignissimos, perspiciatis sunt. Sint perferendis a, rerum cumque soluta ut incidunt aperiam expedita, modi debitis quisquam id doloremque necessitatibus quaerat similique reprehenderit et molestias itaque, vero optio iusto! A quidem, alias hic distinctio nobis dolor deserunt ab sit saepe laudantium consequuntur eum ratione esse incidunt deleniti nulla autem. Ipsam sit inventore placeat est vitae, aliquid, a excepturi iure facere perferendis impedit blanditiis vero velit illo eum, alias distinctio dignissimos dolores cumque dolorem consequuntur provident? Quod asperiores ea ullam, molestiae dignissimos optio incidunt dicta repudiandae sit quas dolores quo aliquid explicabo tenetur temporibus totam ab nulla fuga illo numquam omnis. Voluptatibus dicta molestiae odit consequatur veritatis, pariatur, possimus tenetur dolorem ea ducimus delectus quibusdam sint. Soluta, asperiores ad dolorum magni odit, consectetur qui recusandae numquam dolorem a labore commodi maxime obcaecati dolores eaque. At amet ullam ab reiciendis, maiores voluptatem debitis, architecto nostrum perspiciatis totam minus dolore, suscipit impedit ducimus odio aliquid eveniet dolorum voluptate id quibusdam incidunt optio in? Nesciunt odit placeat possimus, eum impedit iusto blanditiis temporibus eaque id delectus dignissimos inventore magnam nam. Officia eos minima animi vitae odio. Tenetur doloribus voluptates ducimus dolorum suscipit culpa animi reprehenderit eligendi veniam magni saepe quisquam nesciunt illum ab sint aliquid nihil nulla, vero iste provident iusto? Dicta error illo repudiandae sed placeat corporis? Cum tenetur dolor pariatur cupiditate id, molestiae earum dolorum commodi minus libero, quod maxime aliquam debitis aspernatur, saepe ad ipsam deserunt corporis iste ipsum. Maxime recusandae laudantium repellat odio aut tempora ipsum, explicabo, deleniti, reiciendis nam asperiores officiis inventore dicta autem? Distinctio eum illo dicta quisquam ad minus provident! Explicabo quasi quibusdam qui adipisci, doloremque est inventore. Voluptatum dignissimos libero ab temporibus cum voluptas quibusdam sequi asperiores optio numquam voluptatibus, deserunt ullam placeat quidem voluptate eaque dolorem nam, exercitationem excepturi accusamus ipsum! Aspernatur eum perspiciatis beatae necessitatibus, ducimus quaerat ratione dolorem esse provident, ab omnis! Voluptate unde in fugit cum sapiente illo repellendus totam. Magnam obcaecati laborum quidem perferendis! Veritatis voluptas esse aut nostrum deserunt est iure vero non rerum, totam sed provident odit, at saepe? Tenetur odio totam suscipit distinctio iure atque soluta quae saepe neque magnam accusantium cumque dolorem, modi aut, quia explicabo! Obcaecati a fuga repellendus ullam ducimus enim magni nulla harum qui possimus quia molestias ad minus repellat deleniti error commodi, pariatur aspernatur iste exercitationem soluta doloremque. Eos facere possimus dolores quis libero dicta quidem incidunt quisquam iste dignissimos! Commodi quisquam praesentium, sit nesciunt eveniet sequi amet nemo vel! Quas unde incidunt, aperiam excepturi vel laudantium, aut hic inventore architecto eveniet numquam expedita dicta saepe obcaecati nihil aliquid dolor! Perspiciatis modi impedit veritatis deleniti, soluta accusantium porro enim et sapiente, esse repellendus aperiam aliquid. Explicabo, ad, nihil repudiandae iusto eligendi quia nesciunt mollitia itaque ex sed temporibus facilis inventore accusantium dolore. Fugit, maiores? Sunt nesciunt incidunt fugiat laboriosam minus aliquid quos. Delectus culpa officia reprehenderit, est hic impedit? Vero voluptatem ipsa, laboriosam hic nisi suscipit minus aperiam dolorum assumenda similique necessitatibus ipsum corporis quam exercitationem iste perspiciatis asperiores velit ut saepe molestiae nihil. Qui tempore molestias maiores aliquid facere, tempora illo fugit eveniet blanditiis explicabo hic dolorum quaerat nesciunt ipsa ipsum fugiat quos nulla quas sit harum. Explicabo non facilis voluptatibus commodi nobis nulla sapiente hic, asperiores mollitia amet quod animi culpa ipsum iusto voluptas voluptatem ad sed nihil quam autem officiis. Odit maxime vel, nesciunt ipsa iure, sint minima illum nobis debitis perferendis soluta tempora dignissimos sit error quasi dolore quam molestiae hic? Eveniet suscipit porro dolore repudiandae iure veritatis voluptate quisquam accusamus deleniti facilis architecto fugiat aliquam illum, asperiores saepe adipisci omnis quae autem libero. Veniam dignissimos, nobis nesciunt unde quibusdam cum? Eligendi, at? Deleniti, distinctio quam odit esse nihil magni maiores dolores repellat aliquid! Blanditiis minima exercitationem nobis iusto, ex laboriosam error illo dolore culpa esse vitae pariatur commodi ab dolorum neque alias voluptas illum deserunt eum vel sit. Eum tempora, possimus voluptatum reprehenderit tempore recusandae voluptate accusamus nostrum consequuntur sit a vel earum ab neque deleniti non cupiditate expedita sunt tenetur explicabo obcaecati vitae. Dolorem distinctio tempore assumenda porro autem quis, tempora vitae libero voluptas unde pariatur doloremque adipisci quos reprehenderit eligendi asperiores sunt, perspiciatis aliquid deserunt sit? Sequi, itaque id ad illum tempora laboriosam deserunt corrupti, iure, maiores soluta quo nobis quos aut laudantium ipsa inventore velit mollitia earum. Earum sequi omnis, inventore, deleniti odit suscipit asperiores numquam, provident placeat possimus quis dolorum sint mollitia? Adipisci eaque autem laudantium et maiores natus voluptatem repellendus, quod nulla non! Autem libero iusto reprehenderit nulla et amet, aspernatur quasi voluptate ut magni odit, est iste maxime deserunt commodi dignissimos repudiandae accusamus, quos dolores delectus eum ea. Assumenda atque ipsam, possimus pariatur distinctio placeat magnam excepturi officiis. Dolorem vitae nobis, eius quisquam ut atque dolor unde, explicabo porro modi officiis fuga eaque quibusdam impedit alias vero, praesentium qui error magni! Odio iste quasi suscipit labore voluptatem modi, officiis beatae, sed tempore natus sit eaque, omnis asperiores qui sequi nam et sunt quaerat doloribus magnam minima. Assumenda dignissimos eaque suscipit nostrum nisi quod delectus id praesentium qui dolores, inventore veritatis? Blanditiis, aperiam aut omnis amet corrupti id, ullam eum et dolorem repudiandae magnam vitae voluptas possimus molestiae atque dignissimos reiciendis aliquam facere eligendi eveniet debitis nihil doloribus. Perferendis provident, quae hic, unde nostrum obcaecati reprehenderit enim laborum quod quasi dignissimos eaque suscipit aperiam. Odit, porro consectetur, praesentium dolore temporibus architecto dicta sapiente impedit recusandae ratione doloremque sequi nihil itaque adipisci reiciendis! Voluptates corrupti, maiores impedit quo ipsa provident facere iste temporibus distinctio consequuntur voluptas tempore maxime unde ab sit numquam cupiditate minima ex harum vitae at minus quia magni natus? Autem natus quam adipisci ad illo sapiente, maxime itaque, perferendis, reprehenderit distinctio excepturi nesciunt voluptatum delectus commodi dolor dolorum minus omnis fuga facilis unde. Molestias officia est illum culpa pariatur? Enim repellendus modi repudiandae veniam odit praesentium earum vero eum rerum illum, omnis corporis voluptas repellat, quidem sunt distinctio? Atque animi itaque architecto, laboriosam dolorum ex sapiente eum vitae eligendi ipsa cum provident excepturi autem commodi quia reprehenderit exercitationem quae! Deleniti aliquid non id quae? Eum obcaecati maiores perferendis animi iste ducimus laudantium quisquam, error, odio eveniet numquam ut officia impedit nostrum? Repellat, velit autem neque harum nihil saepe. Culpa quam error laborum inventore fugit accusamus odio natus odit quis tenetur deserunt adipisci, assumenda perferendis eveniet autem dolor, minima repudiandae minus! Quaerat asperiores sint obcaecati officia laborum distinctio veritatis rerum repellendus ullam ab laboriosam, temporibus dolorem natus aliquam voluptatibus vero tenetur corporis iure. Asperiores architecto cumque eos quo in, doloribus necessitatibus quia corrupti, deleniti sequi suscipit. Ipsa repudiandae porro possimus totam incidunt qui corrupti libero sunt quia odio atque dolor, ab nisi accusantium vitae blanditiis? Blanditiis, molestiae, explicabo deserunt vel soluta omnis earum numquam beatae suscipit esse, sapiente ullam? Earum accusamus ex iste deserunt consequatur corrupti laboriosam inventore perspiciatis aut ipsam? Libero assumenda incidunt nemo doloribus, molestias excepturi nihil, hic ipsam dignissimos doloremque et at corrupti blanditiis dolorem quas pariatur minima eius fuga asperiores natus. Aspernatur est aliquam expedita maiores? Aperiam natus labore tenetur laborum voluptates possimus explicabo quaerat rerum dolores! Modi cupiditate aliquid libero velit, id molestiae laudantium dolorem numquam magnam deserunt nam eum cumque vitae optio harum omnis quas, exercitationem ea aliquam commodi repellendus nulla rerum sunt voluptates. Quo, fuga illum sapiente corrupti dolores saepe veritatis obcaecati suscipit non sunt? Rerum velit delectus voluptate sequi vitae, veniam ducimus expedita eum modi laboriosam assumenda hic cumque dolorum blanditiis adipisci et totam nostrum! Quae earum, eveniet facilis provident voluptates magnam porro non ab. Porro hic at officia distinctio error deleniti consequatur enim fuga architecto repudiandae delectus laudantium sapiente illo molestiae, perspiciatis dolorum quis, blanditiis inventore natus provident pariatur magnam laborum? Libero nesciunt doloremque accusamus quasi, natus dolorum, nam recusandae sequi, quidem perspiciatis earum accusantium vel! Laborum, temporibus culpa dolores doloribus eveniet quo repellat consectetur nesciunt veniam illo, odio beatae, rem placeat hic dolorem incidunt autem officiis? Quo cum officiis, quas voluptas corrupti expedita minima in nihil illo veniam inventore rem a reprehenderit, aspernatur, sit ipsam officia explicabo facilis suscipit? Repudiandae suscipit cumque neque, eius, dolore assumenda quaerat excepturi dolores unde maiores, delectus quibusdam eligendi. Aspernatur quam minus nobis fuga vero sapiente at dolor ratione aliquam eligendi, natus accusantium similique tenetur dignissimos officiis minima inventore ipsum, harum architecto hic consequatur consequuntur! Animi ad nesciunt voluptates voluptate, aliquam harum! Tenetur, aperiam totam? Ab, debitis. Non sit neque dolorum quas et, ipsum fugit quibusdam saepe assumenda animi esse impedit qui cupiditate atque a magnam voluptatum sunt temporibus, dolorem totam tempore! Id natus asperiores quibusdam impedit! Quam, odit voluptas. Voluptas inventore, maiores dolorum rerum excepturi architecto veritatis exercitationem mollitia quis molestias nemo nisi debitis expedita et, atque culpa explicabo in corrupti fugit veniam, incidunt ipsam. Omnis doloribus, dolorem modi aliquam voluptates voluptas. Provident aperiam voluptas modi velit. Accusamus dignissimos reprehenderit, architecto nesciunt nemo molestiae tenetur quae quibusdam enim sunt, aliquid, cum expedita tempora quam. Itaque, quia dignissimos! Quos nam perspiciatis molestiae aliquid? Atque, odio ipsam. Necessitatibus doloribus adipisci accusamus est quia aut cumque, odit minus incidunt itaque modi, voluptatem veniam? Illum soluta nobis quis quo architecto dolores repudiandae itaque nesciunt alias beatae, quasi, accusamus excepturi! Sed minus aspernatur fugiat autem culpa blanditiis fugit, deleniti tempora, similique, saepe voluptatum non corporis! Hic, inventore. Quam corporis minus, voluptas sit molestias unde nulla? Doloribus aliquam ut eos magnam. Optio molestiae esse ratione suscipit dicta quod enim ea officia maiores voluptas quidem cupiditate excepturi, ab commodi veritatis eum nemo possimus tempore hic necessitatibus voluptate assumenda quibusdam error. Esse numquam alias doloremque vitae sint animi non a enim tempore porro, obcaecati asperiores consectetur minima eum consequatur dolorem atque aspernatur quaerat ex, quae beatae incidunt possimus quos! Possimus non numquam explicabo beatae, totam mollitia! Nam quasi voluptas cum enim doloribus.</p>
+    <!-- JavaScript to handle sticky behavior -->
+    <script>
+        window.onscroll = function() {stickyNavbar()};
         
-        <!-- <header class="bg-white">
-            <nav class="max-w-7xl mx-auto flex justify-between items-center">
-                <div>
-                    <img  src="./logo-2.png" alt="">
-                </div>
-                <div class="nav-links md:static flex items-center px-5 gap-[4vw] absolute  md:min-h-fit min-h-[60vh] left-0 top-[-100%] md:w-auto w-full">
-                    <ul class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8">
-                        <li>
-                            <a href="">Home</a>
-                        </li>
-                        <li>
-                            <a href="">Pages</a>
-                        </li>
-                        <li>
-                            <a href="">Services</a>
-                        </li>
-                        <li>
-                            <a href="">Blog</a>
-                        </li>
-                        <li>
-                            <a href="">Contact Us</a>
-                        </li>
-                    </ul>
-                    <div class="flex items-center gap-6">
-                        <button class="text-white shadow-lg rounded-3xl px-5 py-2 bg-gradient-to-r from-[#F56787] to-[#F79C63]">Get A Quote</button>
-                        <ion-icon onclick="onToggleMenu(this)"name="close" class="text-3xl cursor-pointer md:hidden"></ion-icon>
-                    </div>
-                </div>
-                
-            </nav>
-        </header>
-
-        <script>
-            const navLinks = document.querySelector('nav-links')
-            function onToggleMenu(e){
-                e.name = e.name === 'menu' ? 'close' : 'menu'
-                navLinks.classList.toggle('top-[9%]')
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+        
+        function stickyNavbar() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky");
+            } else {
+                navbar.classList.remove("sticky");
             }
-        </script> -->
-        <!-- <section>
-            <div class="max-w-7xl mx-auto">
-                <div>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
-                        <div>
-                            <p class="bg-[#FEEFF3] text-[#F56787] pl-5 pt-2 h-10 rounded-xl w-36 font-semibold shadow-2xl">OUR SERVICES</p>
-                            <h3 class="font-bold mt-8 text-4xl text-black mb-20">We Are Providing <br> Digital Services</h3>
-                        </div>
-                        <div class="card w-full md:w-96 glass hover:bg-gradient-to-r from-[#F56787] to-[#F89F61] bg-white mb-5 ">
-                            <div class="text-[#F56787] w-full h-14 bg-no-repeat" style="background-image: url(./pattern1-light.d7b4c39949e0bf5e7653f321835e065d.png);">
-                                <img class="mt-12 ml-12 h-12 w-12" src="./research.png" alt="">
-                            </div>
-                            <div class="card-body text-black">
-                                <h2 class="card-title mt-9">Strategy & Research</h2>
-                                <p class="text-base mt-4">Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis, pellentesque luctus leoam iaculis venenatis</p>
-                            </div>
-                        </div>
-                        <div class="card w-full md:w-96 glass hover:bg-gradient-to-r from-[#F56787] to-[#F89F61] bg-white mb-5 md:mx-5">
-                            <div class="text-[#F56787] w-full h-14 bg-no-repeat" style="background-image: url(./pattern1-light.d7b4c39949e0bf5e7653f321835e065d.png);">
-                                <img class="mt-12 ml-12 h-12 w-12" src="./research.png" alt="">
-                            </div>
-                            <div class="card-body text-black">
-                                <h2 class="card-title mt-9">Strategy & Research</h2>
-                                <p class="text-base mt-4">Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis, pellentesque luctus leoam iaculis venenatis</p>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-                <div class="mt-10">
-                    <div class="flex flex-col md:flex-row md:flex-wrap md:-mx-5 pl-2">
-                        <div class="card w-full md:w-96 glass hover:bg-gradient-to-r from-[#F56787] to-[#F89F61] bg-white mb-5 md:mx-5 md:mt-0 md:h-[320px] lg:mt-[-110px]">
-                            <div class="text-[#F56787] w-full h-14 bg-no-repeat" style="background-image: url(./pattern1-light.d7b4c39949e0bf5e7653f321835e065d.png);">
-                                <img class="mt-12 ml-12 h-12 w-12" src="./research.png" alt="">
-                            </div>
-                            <div class="card-body text-black">
-                                <h2 class="card-title mt-9">Strategy & Research</h2>
-                                <p class="text-base mt-4">Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis, pellentesque luctus leoam iaculis venenatis</p>
-                            </div>
-                        </div>
-                        <div class="card w-full md:w-96 glass hover:bg-gradient-to-r from-[#F56787] to-[#F89F61] bg-white mb-5 md:mx-5">
-                            <div class="text-[#F56787] w-full h-14 bg-no-repeat" style="background-image: url(./pattern1-light.d7b4c39949e0bf5e7653f321835e065d.png);">
-                                <img class="mt-12 ml-12 h-12 w-12" src="./research.png" alt="">
-                            </div>
-                            <div class="card-body text-black">
-                                <h2 class="card-title mt-9">Strategy & Research</h2>
-                                <p class="text-base mt-4">Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis, pellentesque luctus leoam iaculis venenatis</p>
-                            </div>
-                        </div>
-                        <div class="card w-full md:w-96 glass hover:bg-gradient-to-r from-[#F56787] to-[#F89F61] bg-white mb-5 md:mx-5">
-                            <div class="text-[#F56787] w-full h-14 bg-no-repeat" style="background-image: url(./pattern1-light.d7b4c39949e0bf5e7653f321835e065d.png);">
-                                <img class="mt-12 ml-12 h-12 w-12" src="./research.png" alt="">
-                            </div>
-                            <div class="card-body text-black">
-                                <h2 class="card-title mt-9">Strategy & Research</h2>
-                                <p class="text-base mt-4">Vestibulum a efficitur ex. Ut iaculis dapibus iaculis. Praesent lacus magna, rhoncus quis magna quis, pellentesque luctus leoam iaculis venenatis</p>
-                            </div>
-                        </div>
-                    </div>                    
-                </div>
-            </div>
-        </section> -->
-
-        <!-- <section style="background-image: url(./bg16.png);" >
-            <div class="max-w-7xl mx-auto">
-                <div class="text-center flex justify-center items-center">
-                    <p class="text-center w-36 p-2 bg-[#FEEFF3] text-[#F56787] shadow-2xl rounded-xl mt-32 mb-10">OUR BLOG</p>
-                </div>
-                <h3 class="text-center text-4xl font-bold text-black">Latest News & Blog</h3>
-                <div class="flex gap-5 mt-16 ">
-                    <div>
-                        <img class="absolute w-[635px] rounded-xl" src="./blog1.jpg" alt="">
-                        <ul class="gap-2 text-white bg-[#F55F8D] rounded-lg m-4 pl-4  w-11 md:relative">
-                            <li class="mt-[-8px]">2</li>
-                            <li class="mt-[-8px]">5</li>
-                            <li>M</li>
-                            <li class="mt-[-8px]">a</li>
-                            <li class="mt-[-8px]">r</li>
-                            <li class="mt-[-8px]">c</li>
-                            <li class="mt-[-8px]">h</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="md:ml-[570px]">
-                            <img class="absolute w-[635px] rounded-xl" src="./blog2.jpg" alt="">
-                            <ul class="gap-2 text-white bg-[#F55F8D] rounded-lg m-4 pl-4  w-11 md:relative">
-                                <li class="mt-[-8px]">2</li>
-                                <li class="mt-[-8px]">5</li>
-                                <li>M</li>
-                                <li class="mt-[-8px]">a</li>
-                                <li class="mt-[-8px]">r</li>
-                                <li class="mt-[-8px]">c</li>
-                                <li class="mt-[-8px]">h</li>
-                            </ul>
-                        </div>
-                    
-                </div>
-                <div class="flex my-12">
-    
-                </div>
-                
-            </div>
-            
-            <br>
-        </section>
-
-        <div class="flex justify-between">
-            <img src="./logo-light1.png" alt="">
-            <img src="./logo-light2.png" alt="">
-            <img src="./logo-light3.png" alt="">
-            <img src="./logo-light4.png" alt="">
-            <img src="./logo-light4.png" alt="">
-            <img src="./logo-light6.png" alt="">
-        </div>
-         -->
-        
-         Div
-         H2 - our blog
-         H1 - latest news
-         Div - parent div for image (flex)
-          Div - card div (relative)
-           Div - image container
-            Img
-            P - date (absolute)
-           Div - content container
-            Small 
-            H3
-            P
-            Button
-
-        <!-- <section class="bg-cover bg-center" style="background-image: url(./bg16.png);">
-            <div class="max-w-7xl mx-auto">
-                <div class="mx-4">
-                    <h2 class="text-center mx-auto px-4 py-2 bg-[#FEEFF3] text-[#F56787] shadow-2xl rounded-xl mt-32 md:w-36 md:items-center mb-10">OUR BLOG</h2>
-
-                    <h1 class="text-center text-4xl font-bold text-black">Latest News & Blog</h1>
-                    <div class="flex gap-5 py-8">
-                        <div class="relative">
-                            <div>
-                                <img class="rounded-lg" src="./blog1.jpg" alt="">
-                                <p class="absolute rotate-90 mt-[-310px] bg-[#F55F8D] py-2 px-4 rounded-xl text-white font-semibold">25 / March</p>
-                            </div>
-                            <br>
-                            <small class="text-[#F55F8D] text-base">Design // Development</small>
-                            <h3 class="text-3xl font-bold text-black mt-4">Maecenas maximus augue eget libero dictum, vitae tempus erat pretium.</h3>
-                            <p class="text-base text-black mt-4">Nunc convallis sagittis dui eu dictum. Cras sodales id ipsum ac aliquam. Phasellus justo quam, sagittis vel sem congue, vehicula tempus elit. Pellentesque ut scelerisque ante.</p>
-                            <button class="text-[#F55F8D] text-base mt-4">Read More</button>
-                        </div>
-                        <div class="relative">
-                            <div>
-                                <img class="rounded-lg" src="./blog2.jpg" alt="">
-                                <p class="absolute rotate-90 mt-[-310px] bg-[#F55F8D] py-2 px-4 rounded-xl text-white font-semibold">25 / March</p>
-                            </div>
-                            <br>
-                            <small class="text-[#F55F8D] text-base">Design // Development</small>
-                            <h3 class="text-3xl font-bold text-black mt-4">Maecenas maximus augue eget libero dictum, vitae tempus erat pretium.</h3>
-                            <p class="text-base text-black mt-4">Nunc convallis sagittis dui eu dictum. Cras sodales id ipsum ac aliquam. Phasellus justo quam, sagittis vel sem congue, vehicula tempus elit. Pellentesque ut scelerisque ante.</p>
-                            <button class="text-[#F55F8D] text-base mt-4">Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        
-Div
- H2 - our blog
- H1 - latest news
- Div - parent div for image (flex)
-  Div - card div (relative)
-   Div - image container
-    Img
-    P - date (absolute)
-   Div - content container
-    Small 
-    H3
-    P
-    Button
-        <!-- <div class="bg-gradient-to-r from-[#F56787] to-[#F79C63] h-[810px]">
-            <div class="max-w-7xl mx-auto">
-                <nav>
-                    <div class="absolute ml-[950px]">
-                        <img class="w-[500px] h-[540px] rounded-s-lg" src="./pic1.jpg" alt="">
-                    </div>
-                    <div class="relative flex justify-between py-4">
-                        <div class="flex items-center">
-                            <img class="h-5 w-5 mr-2 mt-1" src="./email.png" alt="email">
-                            <p class="text-white text-sm sm:text-base">info@example.com</p>
-                            <img class="h-5 w-5 mr-2 ml-4 mt-1" src="./phone-call.png" alt="Phone">
-                            <p class="text-white text-sm sm:text-base">+91 987-654-321</p>
-                        </div>
-                        <div class="flex"> 
-                            <img class="h-6 w-6 mr-2 mt-1" src="./facebook.png" alt="facebook">
-                            <img class="h-6 w-6 mr-2 mt-1" src="./social.png" alt="instagram">
-                            <img class="h-6 w-6 mr-2 mt-1" src="./twitter.png" alt="twitter">
-                        </div>
-                    </div>
-                    <hr class="relative">
-                    <div>
-                        
-                        <div class="relative flex justify-between items-center mt-6">
-                            <div>
-                                <img src="./logo-white.png" alt="">
-                            </div>
-                            <div class="mt-6 flex flex-wrap gap-4">
-                                <a class="text-white text-base font-bold p-1" href="Home">Home</a>
-                                <a class="text-white text-base font-bold p-1" href="Pages">Pages</a>
-                                <a class="text-white text-base font-bold p-1" href="Services">Services</a>
-                                <a class="text-white text-base font-bold p-1" href="Blog">Blog</a>
-                                <a class="text-white text-base font-bold p-1" href="Contact Us">Contact Us</a>
-                                <button class="text-white shadow-lg rounded-3xl h-10 pl-4 pr-4 bg-gradient-to-r from-[#F56787] to-[#F79C63]">Get A Quote</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-white mt-[-52px]">
-                        <p class="mt-32 text-lg p-1 shadow-sm rounded-2xl bg-[#F67281] w-48"><span class="pl-5 pb-4">WE ARE THE BEST</span></p>
-                        <h3 class="text-3xl sm:text-5xl mt-5 mb-4">We Provide Website</h3>
-                        <h3 class="text-3xl sm:text-5xl mb-5"> Solution For You</h3>
-                        <p class="text-base mb-4">Mauris in enim sollicitudin quam sollicitudin fermentum ut vitae massa.<br>Donec venenatis accumsan nisi, sit amet maximus velit euismod sit amet. <br>Vivamus et sem sed ipsum pretium lobortis non vitae sem.</p>
-                        <button class="text-base sm:text-lg rounded-3xl shadow-lg bg-white text-red-400 h-12 pr-6 pl-6">Learn More</button>
-                    </div>
-                </nav>
-            </div>
-            <img class="mt-[px]" src="./bg7.263dd148ef050cd0d81a0c5506384a76.png" alt="">
-        </div> -->
-        
-        
-        <div class="bg-gradient-to-r from-[#F56787] to-[#F79C63] h-screen sm:h-[810px]">
-            <div class="max-w-7xl mx-auto">
-                <nav>
-                    <div class="md:absolute md:ml-[900px] ml-4 sm:ml-0">
-                        <img class="w-full sm:w-[500px] h-auto sm:h-[540px] rounded-lg hidden md:block lg:block" src="./pic1.jpg" alt="">
-                    </div>
-                    <div class="relative flex flex-col sm:flex-row justify-between py-4">
-                        <div class="hidden md:flex lg:flex items-center">
-                            <img class="h-5 w-5 mr-2 mt-1" src="./email.png" alt="email">
-                            <p class="text-white text-sm sm:text-base">info@example.com</p>
-                            <img class="h-5 w-5 mr-2 ml-4 mt-1" src="./phone-call.png" alt="Phone">
-                            <p class="text-white text-sm sm:text-base">+91 987-654-321</p>
-                        </div>
-                        <div class="hidden md:flex lg:flex mt-4 sm:mt-0"> 
-                            <img class="h-6 w-6 mr-2 mt-1" src="./facebook.png" alt="facebook">
-                            <img class="h-6 w-6 mr-2 mt-1" src="./social.png" alt="instagram">
-                            <img class="h-6 w-6 mr-2 mt-1" src="./twitter.png" alt="twitter">
-                        </div>
-                    </div>
-                    <hr class="relative hidden md:block lg:block">
-                    <div class="relative flex flex-col sm:flex-row justify-between items-center mt-6">
-                        <div class="flex ml-[-150px] md:ml-0 lg:ml-0 ">
-                            <img class="ml-36 md:ml-[-0px] lg:ml-[-0px]" src="./logo-white.png" alt="">
-                            <div>
-                                <img class="block mt-5 ml-32 md:hidden lg:hidden h-6" src="./menu.png" alt="">
-                            </div>
-                        </div>
-                        <div class="mt-6 md:flex lg:flex flex-wrap gap-4 hidden">
-                            <a class="text-white text-base font-bold p-1" href="Home">Home</a>
-                            <a class="text-white text-base font-bold p-1" href="Pages">Pages</a>
-                            <a class="text-white text-base font-bold p-1" href="Services">Services</a>
-                            <a class="text-white text-base font-bold p-1" href="Blog">Blog</a>
-                            <a class="text-white text-base font-bold p-1" href="Contact Us">Contact Us</a>
-                            <button class="text-white shadow-lg rounded-3xl h-10 pl-4 pr-4 bg-gradient-to-r from-[#F56787] to-[#F79C63]">Get A Quote</button>
-                        </div>
-                    </div>
-                    <div class="text-white ml-4 text-justify mt-[52px] sm:mt-[0px]">
-                        <p class="mt-8 sm:mt-32 text-lg p-1 shadow-sm rounded-2xl bg-[#F67281] w-48"><span class="pl-5 pb-4">WE ARE THE BEST</span></p>
-                        <h3 class="text-3xl sm:text-5xl mt-5 mb-4">We Provide Website</h3>
-                        <h3 class="text-3xl sm:text-5xl mb-5"> Solution For You</h3>
-                        <p class="text-base mb-4 md:w-[500px] lg:w-[500px]">Mauris in enim sollicitudin quam sollicitudin fermentum ut vitae massa.Donec venenatis accumsan nisi, sit amet maximus velit euismod sit amet. Vivamus et sem sed ipsum pretium lobortis non vitae sem.</p>
-                        <button class="text-base sm:text-lg rounded-3xl shadow-lg bg-white text-red-400 h-12 pr-6 pl-6">Learn More</button>
-                    </div>
-                </nav>
-            </div>
-            <div class="md:mt-[-45px] lg:mt-[-45px]">
-                <img class="mt-[-500px] sm:mt-0 hidden md:block lg:block" src="./bg7.263dd148ef050cd0d81a0c5506384a76.png" alt="">
-            </div>
-        </div>
-        
-        
-        
-        
-        
-        
-        
-        
+        }
+    </script>
 </body>
+
 </html>
